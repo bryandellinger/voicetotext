@@ -72,7 +72,7 @@
             for (let i = event.resultIndex, len = event.results.length; i < len; i++) {
                 let transcript = (event.results[i][0].transcript);
                 const words = transcript.split(" ");
-                const filteredWords = words.filter(word.indexOf(*) > 0 ? '' : word  => !badWords.includes(word.toLowerCase()));
+                const filteredWords = words.filter(word.split().indexOf('*') > 0 ? '' : word  => !badWords.includes(word.toLowerCase()));
               
                 if (event.results[i].isFinal) {
                     finalTranscript += filteredWords.join(' ');
