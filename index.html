@@ -66,6 +66,7 @@
         recognition.interimResults = true;
         recognition.maxAlternatives = 10;
         recognition.continuous = true;
+        recognition.end = (event) => { recognition.start() };
 
         recognition.onresult = (event) => {
             let interimTranscript = '';
