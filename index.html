@@ -75,7 +75,7 @@
                 const words2 = [];
                 words.forEach(element => {
                     if (element.indexOf('*') < 0){
-                        words2.push(word);
+                        words2.push(element);
                     }
                 });
                 const filteredWords = words2.filter(word  => !badWords.includes(word.toLowerCase()));
